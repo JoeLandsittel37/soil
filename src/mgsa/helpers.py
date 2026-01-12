@@ -13,7 +13,7 @@ def say_hello():
 
 
 
-def plot_old(data, title, cmap = "Blues", vmin = None, vmax = None, fontname="Helvetica"):
+def plot_old(data, title, cmap = "Blues", vmin = None, vmax = None, fontname="Helvetica", figsize=(10,8)):
     """
     plot_native_perturbed
     inputs: an array with 10 rows (native pHs) and 11 columns (perturbed pHs)
@@ -22,6 +22,7 @@ def plot_old(data, title, cmap = "Blues", vmin = None, vmax = None, fontname="He
     soils = ["Soil3", "Soil5", "Soil6", "Soil9", "Soil11", "Soil12", "Soil14", "Soil15", "Soil16", "Soil17"]
     native = [4.987, 5.324, 5.405, 5.822, 6.186, 6.255, 6.545, 6.789, 6.86,  7.052]
  
+    plt.figure(figsize=figsize)
     plt.imshow(data, aspect="auto", cmap=cmap, origin="lower", vmin = vmin, vmax = vmax)
     plt.colorbar()
 

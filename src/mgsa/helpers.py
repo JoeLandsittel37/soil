@@ -80,7 +80,7 @@ def plot(
     y = np.concatenate(y)
     data = data.flatten()
     
-    cmap = get_cmap(cmap)
+    # cmap = get_cmap(cmap)
 
     vmin = vmin if vmin is not None else np.nanmin(data)
     vmax = vmax if vmax is not None else np.nanmax(data)
